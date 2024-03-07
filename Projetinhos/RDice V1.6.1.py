@@ -9,7 +9,7 @@ while True:
             numero_de_dados = int(input("Quantos dados deseja rolar? "))
             if tipo_de_d < 0:
                 continue
-            if tipo_de_d == 20:
+            elif tipo_de_d == 20:
                 valor_adicional = 0
                 valor_pericia = int(input("Deseja adicionar algum valor de perícia? "))
             else:
@@ -57,5 +57,4 @@ else:
     
 
 # corrigir bugs e otimizar sistema
-# adicionar verificação
 # testes e mais testes para correção de possíveis bugs
