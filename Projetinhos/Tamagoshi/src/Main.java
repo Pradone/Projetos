@@ -13,12 +13,12 @@ public class Main {
         
         Tamagochi tama1 = new Tamagochi (name1, 1, 100, 100, 100);
         Tamagochi tama2 = new Tamagochi (name2, 1, 100, 100, 100);
+        System.out.println();
         
         do {
         	tama1.print();
 	        System.out.println();
 	        tama2.print();
-	        
 	        System.out.println();
 	        System.out.println("O que gostaria de fazer?");
 	        action = input.next();
@@ -33,7 +33,7 @@ public class Main {
 	        		tama1.eat();
 	        	}else if (witch.equals("2") | witch.equals(name2)) {
 	        		tama2.eat();
-	        	}else if (witch.equals("os 2")) { 
+	        	}else if (witch.equals("ambos")) { 
 	        		tama1.eat();
 	        		tama2.eat();
 	        	}
@@ -44,7 +44,7 @@ public class Main {
 	        		tama1.play();
 	        	}else if (witch.equals("2") | witch.equals(name2)) {
 	        		tama2.play();
-	        	}else if (witch.equals("os 2")) { 
+	        	}else if (witch.equals("ambos")) { 
 	        		tama1.play();
 	        		tama2.play();
 	        	}

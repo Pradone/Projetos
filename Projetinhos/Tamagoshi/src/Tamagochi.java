@@ -41,9 +41,13 @@ public class Tamagochi {
 	
 	public void hungry() {
         hunger -= 15;
-        if(hunger < 50) {
+        if(hunger <= 50) {
     		System.out.println(name +" está ficando com fome, alimente-o(a)!");
+        }else if (hunger >= 100) {
+        	hunger = 100;
+        	System.out.println(name +" está satisfeito!");
         }else if(hunger <= 0) {
+        	hunger = 0;
         	System.out.println(name +" está com fome, alimente-o(a)!");
         }
     }
@@ -51,7 +55,11 @@ public class Tamagochi {
         hapiness -= 15;
         if(hapiness <= 50) {
         	System.out.println(name +" está ficando triste, deixe-o(a) feliz!");
-        }else if(hapiness <= 0) {
+        }else if (hapiness >= 100) {
+        	hapiness = 100;
+        	System.out.println(name +" está feliz!");
+        }else if (hapiness <= 0) {
+        	hapiness = 0;
         	System.out.println(name +" está triste, deixe-o(a) feliz!");
         }
     }
@@ -74,25 +82,13 @@ public class Tamagochi {
 		hapiness += 35;
 		if (hapiness <= 100) {
 			System.out.println("Você brincou com "+ name +", ele parece estar mais feliz!");
-		}else if (hapiness >= 100) {
-			hapiness = 115;
-        	System.out.println(name +" está bem feliz!");
-        }else if (hapiness <= 0) {
-        	hapiness = 0;
-        	System.out.println(name +" está bem triste!");
-        }
+		}
     }
 	public void eat() {
 		hunger += 35;
 		health += 10;
 		if (hunger <= 100) {
 	        System.out.println(name +" foi alimentado");
-		}else if (hunger >= 100){
-			hunger = 115;
-			System.out.println(name +" está de barriga lotada");
-		}else if (hunger <= 0) {
-			hunger = 0;
-			System.out.println(name +" está está com fome");
 		}
     }
 	
