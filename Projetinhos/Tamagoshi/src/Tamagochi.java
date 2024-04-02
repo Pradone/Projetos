@@ -42,38 +42,38 @@ public class Tamagochi {
 	public void hungry() {
         hunger -= 15;
         if(hunger <= 50) {
-    		System.out.println(name +" está ficando com fome, alimente-o(a)!");
+    		System.out.println(name +" estï¿½ ficando com fome, alimente-o(a)!");
         }else if (hunger >= 100) {
         	hunger = 100;
-        	System.out.println(name +" está satisfeito!");
+        	System.out.println(name +" estï¿½ satisfeito!");
         }else if(hunger <= 0) {
         	hunger = 0;
-        	System.out.println(name +" está com fome, alimente-o(a)!");
+        	System.out.println(name +" estï¿½ com fome, alimente-o(a)!");
         }
     }
 	public void sadness() {
         hapiness -= 15;
         if(hapiness <= 50) {
-        	System.out.println(name +" está ficando triste, deixe-o(a) feliz!");
+        	System.out.println(name +" estï¿½ ficando triste, deixe-o(a) feliz!");
         }else if (hapiness >= 100) {
         	hapiness = 100;
-        	System.out.println(name +" está feliz!");
+        	System.out.println(name +" estï¿½ feliz!");
         }else if (hapiness <= 0) {
         	hapiness = 0;
-        	System.out.println(name +" está triste, deixe-o(a) feliz!");
+        	System.out.println(name +" estï¿½ triste, deixe-o(a) feliz!");
         }
     }
 	public void dying() {
         health -= 10;
         if (health <= 0) {
         	health = 0;
-        	System.out.println(name+" está morto...");
+        	System.out.println(name+" estï¿½ morto...");
         }
     }
 	public void older() {
 		age += 1;
 		if (age >= 10) {
-			System.out.println(name +" está ficando velhinho(a)");
+			System.out.println(name +" estï¿½ ficando velhinho(a)");
 		}else if (age >= 11) {
 			health -= 25;
 		}
@@ -81,7 +81,7 @@ public class Tamagochi {
 	public void play() {
 		hapiness += 35;
 		if (hapiness <= 100) {
-			System.out.println("Você brincou com "+ name +", ele parece estar mais feliz!");
+			System.out.println("Vocï¿½ brincou com "+ name +", ele parece estar mais feliz!");
 		}
     }
 	public void eat() {
@@ -103,7 +103,7 @@ public class Tamagochi {
 	public void print() {
 		System.out.println("Nome: "+ name);
 		System.out.println("Idade: "+ age);
-		System.out.println("Saúde: "+ health);
+		System.out.println("Saï¿½de: "+ health);
 		System.out.println("Fome: "+ hunger);
 		System.out.println("Felicidade: "+ hapiness);
 	}
