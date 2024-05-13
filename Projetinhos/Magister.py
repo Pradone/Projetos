@@ -15,10 +15,10 @@ pyautogui.press("enter")
 
 #Adding the login
 time.sleep(0.5)
-pyautogui.write("1231110608")
+pyautogui.write("usuario")
 
 #Adding the password
 time.sleep(0.5)
 pyautogui.press('tab')
-pyautogui.write("9e380209")
+pyautogui.write("senha")
 pyautogui.press("enter")
