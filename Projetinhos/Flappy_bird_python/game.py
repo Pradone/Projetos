@@ -3,17 +3,26 @@ import os
 import random
 import time
 
+
 SCREEN_WIDTH = 500
 SCREEN_HEIGHT = 800
 
 PIPE_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','pipe.png')))
 GORUND_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','base.png')))
 BACKGROUND_IMAGE =pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bg.png')))
-BIRD_IMAGES = [
-    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird1.png'))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird2.png'))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird3.png')))
+
+if (random.randint(1,25)) == 1:
+    BIRD_IMAGES = [
+    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','birdS1.png'))),
+    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','birdS2.png'))),
+    pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','birdS3.png')))
 ]
+else:
+    BIRD_IMAGES = [
+        pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird1.png'))),
+        pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird2.png'))),
+        pygame.transform.scale2x(pygame.image.load(os.path.join('Projetos','Projetinhos','Flappy_bird_python','imgs','bird3.png')))
+    ]
 
 pygame.font.init()
 SCORE_FONT = pygame.font.SysFont('arial', 50)
@@ -245,3 +254,15 @@ def main():
         
 if __name__ == '__main__':
     main()
+    
+    
+    
+    
+    
+#add modo de ganhar o jogo
+    #se pontuação for X, jogo vence
+#add outros assets para fazer o jogo se parecer mais com pokemon
+#melhorar tela de morte
+#melhorar jogo quando o jogador perder o jogo
+#add um try again no jogo
+    #um sistema de score máximo entre as tentativas
