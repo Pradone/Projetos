@@ -18,11 +18,10 @@ def main(pag):
         user_name = user_name_field.value
         mensage = f"{user_name}: {mensage_text}"
         pag.pubsub.send_all(mensage)
-        
         mensage_field.value = ""
         pag.update()
         
-    mensage_field = ft.TextField(label="Digite sua mensagem", on_submit=send_mensage)    
+    mensage_field = ft.TextField(label="Digite sua mensagem", content_padding=0, on_submit=send_mensage)    
     send_mensage_button = ft.ElevatedButton("Enviar", on_click=send_mensage)
     mensage_line = ft.Row([mensage_field, send_mensage_button])
 
@@ -45,6 +44,13 @@ def main(pag):
         pag.update()
         
     button_start = ft.ElevatedButton("Iniciar chat", on_click=start_chat)
+    pag.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    pag.title = "PyChatbox"
+    pag.window_minimizable = True
+    pag.window_maximizable = True
+    pag.window_resizable = False
+    pag.window_width = 500
+    pag.window_height = 500
     pag.add(tittle, button_start)
 
 ft.app(main)
